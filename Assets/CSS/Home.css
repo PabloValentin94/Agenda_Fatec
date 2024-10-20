@@ -63,9 +63,8 @@
 
     min-height: 450px;
     min-width: 450px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    max-height: 450px;
+    max-width: 450px;
     overflow: hidden;
 
 }
@@ -98,6 +97,8 @@
 
         min-height: 300px;
         min-width: 300px;
+        max-height: 300px;
+        max-width: 300px;
 
     }
 

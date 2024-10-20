@@ -9,11 +9,39 @@ function ADD_Favicon()
 
     favicon.setAttribute("type", "image/x-icon");
 
-    favicon.setAttribute("sizes", "512x512");
-
     favicon.setAttribute("href", (window.location.pathname.split("/").pop() === "Index.html") ? "./Assets/Images/Favicon.png" : "../Assets/Images/Favicon.png");
 
     document.head.appendChild(favicon);
+
+}
+
+function ADD_Menu()
+{
+
+    const header = '<header>' +
+
+                        '<nav>' +
+
+                            '<div id="options">' +
+    
+                                '<a href="#"> Início </a>' +
+    
+                            '</div>' +
+    
+                            '<div id="access">' +
+    
+                                '<a href="#"> Cadastro </a>' +
+                                '<a href="#"> Entrar </a>' +
+    
+                            '</div>' +
+    
+                        '</nav>' +
+
+                    '</header>';
+
+    const main = document.getElementById("container").innerHTML;
+
+    document.getElementById("container").innerHTML = header.concat(main);
 
 }
 
@@ -22,5 +50,7 @@ function ADD_Favicon()
 window.onload = function() {
 
     ADD_Favicon();
+
+    ADD_Menu();
 
 }
