@@ -1,0 +1,157 @@
+/* Resources: */
+
+@import url("./Global.css");
+
+/* Styles: */
+
+#form {
+
+    height: auto;
+    width: 100%;
+    min-height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    padding: 15px;
+
+}
+
+#form form {
+
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+    background-color: transparent;
+    border-radius: 15px;
+    padding: 10px;
+
+}
+
+#form form figure {
+
+    min-height: 300px;
+    min-width: 300px;
+    max-height: 300px;
+    max-width: 300px;
+    overflow: hidden;
+
+}
+
+#form form figure img {
+
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    
+}
+
+#form form #data {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+
+}
+
+#form form #data label, #form form #data input {
+
+    font-size: 20px;
+    text-align: center;
+
+}
+
+#form form #data label {
+
+    font-weight: bold;
+
+}
+
+#form form #data input {
+
+    width: 100%;
+    border: 1px solid var(--neutral-color);
+    outline: none;
+    padding: 5px;
+
+}
+
+#form form #data input:focus {
+
+    border: 1px solid var(--contrast-color);
+
+}
+
+#form form #data #buttons {
+
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+
+}
+
+#form form #data #buttons a, #form form #data #buttons button {
+
+    width: 100px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--neutral-color);
+    padding: 5px;
+    cursor: pointer;
+    transition: 0.5s;
+
+}
+
+#form form #data #buttons a {
+
+    text-decoration: none;
+
+}
+
+#form form #data #buttons button, #form form #data #buttons a,
+#form form #data #buttons:hover > button:not(:hover), #form form #data #buttons:hover > a:not(:hover) {
+
+    background-color: transparent;
+    border: 2px solid var(--neutral-color);
+    color: var(--neutral-color);
+
+}
+
+#form form #data #buttons button:hover, #form form #data #buttons button:nth-child(3), #form form #data #buttons a:hover {
+
+    background-color: var(--main-color);
+    border: 2px solid var(--main-color);
+    color: var(--page-color);
+
+}
+
+#form form #data #register, #form form #data #login {
+
+    font-size: 18px;
+    color: var(--neutral-color);
+    text-decoration: none;
+    text-align: center;
+    transition: 0.5s;
+
+}
+
+#form form #data #register:hover, #form form #data #login:hover {
+
+    color: var(--contrast-color);
+
+}

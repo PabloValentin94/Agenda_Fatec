@@ -10,7 +10,7 @@
 
         <script defer type="text/javascript" src="../Assets/JS/Global.js">  </script>
 
-        <link rel="stylesheet" type="text/css" href="../Assets/CSS/Register.css">
+        <link rel="stylesheet" type="text/css" href="../Assets/CSS/Access.css">
 
         <!-- Favicon (Global.js) -->
 
@@ -22,12 +22,49 @@
 
             <main>
 
-                
+                <div id="form">
+
+                    <form action="../Index.html">
+
+                        <figure> <img src="../Assets/Images/Storyset/Register.svg" alt="Cadastro"> </figure>
+
+                        <section id="data">
+
+                            <label for="name"> Insira seu nome completo: </label>
+                            <input type="text" id="name" name="name" maxlength="75" required>
+
+                            <label for="email"> Insira seu e-mail institucional: </label>
+                            <input type="email" id="email" name="email" maxlength="50" required>
+
+                            <label for="password"> Insira sua senha do Agenda Fatec: </label>
+                            <input type="password" id="password" name="password" maxlength="20" required>
+
+                            <div id="buttons">
+
+                                <a href="../Index.html"> Cancelar </a>
+                                <button type="reset"> Limpar </button>
+                                <button type="submit"> Cadastrar </button>
+
+                            </div>
+
+                            <a id="register" href="./Login.html"> Já possui um cadastro? Clique aqui. </a>
+
+                        </section>
+
+                    </form>
+
+                </div>
 
             </main>
 
         </div>
         
     </body>
+
+    <script type="text/javascript">
+
+        document.getElementById("data").querySelector("input").focus();
+
+    </script>
 
 </html>
