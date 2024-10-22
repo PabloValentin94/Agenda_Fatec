@@ -2,10 +2,9 @@
 
 const rooms = [
 
-    {name: "Laboratório 04"},
-    {name: "Laboratório 09"},
-    {name: "Laboratório 02"},
-    {name: "Laboratório 06"}
+    {name: "Auditório 01"}, {name: "Auditório 02"}, {name: "Auditório 03"},
+    {name: "Laboratório 01"}, {name: "Laboratório 02"}, {name: "Laboratório 03"},
+    {name: "Laboratório 04"}, {name: "Laboratório 05"}, {name: "Laboratório 06"}
 
 ];
 

@@ -3,3 +3,14 @@
 @import url("./Global.css");
 
 @import url("./Home.css");
+
+@import url("./About.css");
+
+/* Styles: */
+
+.emphasis {
+
+    color: var(--main-color);
+    font-weight: bold;
+
+}

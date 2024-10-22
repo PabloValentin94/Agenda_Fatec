@@ -1,6 +1,6 @@
 /* Styles: */
 
-#home {
+#about {
 
     height: auto;
     width: 100%;
@@ -15,7 +15,7 @@
 
 }
 
-#home #home-text {
+#about #about-text {
 
     max-width: 50%;
     display: flex;
@@ -26,14 +26,14 @@
 
 }
 
-#home #home-text h2, #home #home-text h1, #home #home-text p {
+#about #about-text h2, #about #about-text p {
 
     max-width: 100%;
     text-align: left;
 
 }
 
-#home #home-text h2 {
+#about #about-text h2 {
 
     font-size: 30px;
     font-weight: bold;
@@ -41,16 +41,7 @@
 
 }
 
-#home #home-text h1 {
-
-    font-size: 75px;
-    font-weight: bolder;
-    text-transform: uppercase;
-    color: var(--main-color);
-
-}
-
-#home #home-text p {
+#about #about-text p {
 
     width: 600px;
     font-size: 22px;
@@ -59,7 +50,7 @@
 
 }
 
-#home figure {
+#about figure {
 
     min-height: 450px;
     min-width: 450px;
@@ -69,7 +60,7 @@
 
 }
 
-#home figure img {
+#about figure img {
 
     height: 100%;
     width: 100%;
@@ -81,26 +72,26 @@
 
 @media (max-width: 1180px) {
 
-    #home {
+    #about {
 
-        flex-direction: column-reverse;
+        flex-direction: column;
 
     }
 
-    #home #home-text {
+    #about #about-text {
 
         max-width: 100%;
         align-items: center;
 
     }
 
-    #home #home-text h2, #home #home-text h1, #home #home-text p {
+    #about #about-text h2, #about #about-text p {
 
         text-align: center;
     
     }
 
-    #home figure {
+    #about figure {
 
         min-height: 300px;
         min-width: 300px;
