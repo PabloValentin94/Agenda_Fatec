@@ -2,15 +2,198 @@
 
 @import url("./Global.css");
 
-@import url("./Home.css");
-
-@import url("./About.css");
-
 /* Styles: */
 
-.emphasis {
+#home, #about, #contact {
+
+    height: auto;
+    width: 100%;
+    min-height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+    background-color: transparent;
+    padding: 80px 15px 15px 15px;
+
+}
+
+#home, #about {
+
+    flex-direction: row;
+
+}
+
+#contact {
+
+    flex-direction: column-reverse;
+
+}
+
+#home .text, #about .text, #contact .text {
+
+    max-width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 25px;
+
+}
+
+#home .text, #about .text {
+
+    align-items: flex-start;
+
+}
+
+#contact .text {
+
+    align-items: center;
+
+}
+
+#home .text .emphasis, #about .text .emphasis, #contact .text .emphasis {
 
     color: var(--main-color);
     font-weight: bold;
+
+}
+
+#home .text h2, #home .text h1, #home .text p
+#about .text h2, #about .text p {
+
+    max-width: 100%;
+    text-align: left;
+
+}
+
+#contact .text h2, #contact .text p {
+
+    max-width: 100%;
+    text-align: center;
+
+}
+
+#home .text h2, #about .text h2, #contact .text h2 {
+
+    max-width: 100%;
+    font-size: 30px;
+    font-weight: bold;
+    color: var(--contrast-color);
+
+}
+
+#home .text h1 {
+
+    max-width: 100%;
+    font-size: 75px;
+    font-weight: bolder;
+    text-transform: uppercase;
+    color: var(--main-color);
+
+}
+
+#home .text p, #about .text p, #contact .text p {
+
+    width: 600px;
+    max-width: 100%;
+    font-size: 22px;
+    line-height: 35px;
+    color: var(--neutral-color);
+
+}
+
+#home figure, #about figure, #contact figure {
+
+    min-height: 450px;
+    min-width: 450px;
+    max-height: 450px;
+    max-width: 450px;
+    overflow: hidden;
+
+}
+
+#home figure img, #about figure img, #contact figure img {
+
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    
+}
+
+#contact .text #links {
+
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+}
+
+#contact .text #links a {
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    cursor: pointer;
+
+}
+
+#contact .text #links a i {
+
+    font-size: 40px;
+    color: var(--contrast-color);
+    transition: 0.5s;
+
+}
+
+#contact .text #links a:hover i {
+
+    color: var(--main-color);
+
+}
+
+/* Responsiveness: */
+
+@media (max-width: 1180px) {
+
+    #home {
+
+        flex-direction: column-reverse;
+
+    }
+
+    #about {
+
+        flex-direction: column;
+
+    }
+
+    #home .text, #about .text {
+
+        max-width: 100%;
+        align-items: center;
+
+    }
+
+    #home .text h2, #home .text h1, #home .text p,
+    #about .text h2, #about .text p {
+
+        text-align: center;
+    
+    }
+
+    #home figure, #about figure, #contact figure {
+
+        min-height: 300px;
+        min-width: 300px;
+        max-height: 300px;
+        max-width: 300px;
+
+    }
 
 }

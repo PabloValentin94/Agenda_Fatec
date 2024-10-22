@@ -103,7 +103,7 @@ body {
 
 #container header nav button, #container header nav #access a, #container header nav #access:hover > a:not(:hover) {
 
-    background-color: transparent;
+    background-color: var(--page-color);
     border: 2px solid var(--neutral-color);
     color: var(--neutral-color);
 

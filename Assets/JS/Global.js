@@ -67,6 +67,8 @@ async function ADD_Menu()
 
                     `<figure> <img src="${assets_root_folder}Assets/Images/Logo.png" alt="Logo"> </figure>` +
 
+                    '<button> Fechar </button>' +
+
                     '<nav>' +
 
                         `<a href="${index_root_folder}Index.html"> Início </a>` +
@@ -74,8 +76,6 @@ async function ADD_Menu()
                         `<a href="${pages_root_folder}Team.html"> Desenvolvedores </a>` +
 
                     '</nav>' +
-
-                    '<button> Fechar </button>' +
 
                  '</div>';
 
