@@ -2,6 +2,17 @@
 
 @import url("https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css");
 
+/* Colors: */
+
+*:root {
+
+    --main-color: #B20000;
+    --page-color: #FFFFFF;
+    --neutral-color: #000000;
+    --contrast-color: #005C6D;
+
+}
+
 /* Styles: */
 
 #menu {

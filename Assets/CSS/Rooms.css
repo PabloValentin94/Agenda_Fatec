@@ -1,0 +1,62 @@
+/* Resources: */
+
+@import url("./Global.css");
+
+/* Styles: */
+
+#rooms {
+
+    height: auto;
+    width: 100%;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 15px;
+    background-color: transparent;
+    padding: 80px 15px 15px 15px;
+
+}
+
+#rooms h1 {
+
+    font-size: 35px;
+    font-weight: bolder;
+    text-transform: uppercase;
+    text-align: center;
+    color: var(--main-color);
+    margin-bottom: 25px;
+
+}
+
+#rooms .room {
+
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--neutral-color);
+    border-radius: 10px;
+    text-decoration: none;
+    padding: 15px;
+    cursor: pointer;
+
+}
+
+#rooms .room h2 {
+
+    font-size: 18px;
+    font-weight: bold;
+    color: var(--neutral-color);
+    text-align: center;
+    transition: 0.5s;
+
+}
+
+#rooms .room:hover h2 {
+
+    color: var(--main-color);
+
+}

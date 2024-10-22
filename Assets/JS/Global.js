@@ -1,3 +1,14 @@
+/*
+
+    Diferença entre Eventos ON e addEventListener:
+
+    Eventos ON (onclick, onload, etc.): Só permite definir uma função para um determinado evento (Causa mau funcionamento se dois scripts
+                                        diferentes acessarem o evento de um mesmo elemento.).
+
+    addEventListener (click, load, etc.): Permite definir várias funções para um mesmo evento de um elemento.
+
+*/
+
 // Constants and Variables:
 
 const assets_root_folder = (window.location.pathname.split("/").pop() === "Index.html") ? "./" : "../";
@@ -59,6 +70,7 @@ async function ADD_Menu()
                     '<nav>' +
 
                         `<a href="${index_root_folder}Index.html"> Início </a>` +
+                        `<a href="${pages_root_folder}Rooms.html"> Salas </a>` +
                         `<a href="${pages_root_folder}Team.html"> Desenvolvedores </a>` +
 
                     '</nav>' +
@@ -75,7 +87,7 @@ async function ADD_Menu()
 
 // Events:
 
-window.onload = async function() {
+window.addEventListener("load", function() {
 
     ADD_Favicon();
 
@@ -102,4 +114,4 @@ window.onload = async function() {
         
     }
 
-}
+});
