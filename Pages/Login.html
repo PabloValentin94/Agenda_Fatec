@@ -62,6 +62,44 @@
 
         document.getElementById("data").querySelector("input").focus();
 
+        document.querySelector("form").onsubmit = function(event) {
+
+            event.preventDefault();
+
+            if(localStorage.getItem("usuario_agenda_fatec") !== null)
+            {
+
+                const form_data = new FormData(event.target);
+
+                const user = localStorage.getItem("usuario_agenda_fatec").split(",");
+
+                if(form_data.get("email") === user[1] && form_data.get("password") === user[2])
+                {
+
+                    localStorage.setItem("usuario_agenda_fatec_logado", true);
+
+                    window.location.href = "../Index.html";
+
+                }
+
+                else
+                {
+
+                    alert("Dados inválidos! Certifique-se de que já está cadastrado e tente novamente.");
+
+                }
+
+            }
+
+            else
+            {
+
+                alert("Dados inválidos! Certifique-se de que já está cadastrado e tente novamente.");
+
+            }
+
+        }
+
     </script>
 
 </html>

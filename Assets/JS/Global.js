@@ -37,17 +37,33 @@ function ADD_Favicon()
 function ADD_Header()
 {
 
+    let access = "";
+
+    if(localStorage.getItem("usuario_agenda_fatec_logado"))
+    {
+
+        access = `<a id="logout" href="${index_root_folder}Index.html"> Sair </a>`;
+
+    }
+
+    else
+    {
+
+        access = `<a href="${pages_root_folder}Register.html"> Cadastro </a>` +
+                 `<a href="${pages_root_folder}Login.html"> Login </a>`;
+
+    }
+
     const header = '<header>' +
 
                         '<nav>' +
 
                             '<button> <i class="bx bx-menu">  </i> </button>' +
     
-                            '<div id="access">' +
-    
-                                `<a href="${pages_root_folder}Register.html"> Cadastro </a>` +
-                                `<a href="${pages_root_folder}Login.html"> Login </a>` +
-    
+                            '<div id="access">' + 
+                        
+                                access + 
+                        
                             '</div>' +
     
                         '</nav>' +
@@ -57,6 +73,19 @@ function ADD_Header()
     const main = document.getElementById("container").innerHTML;
 
     document.getElementById("container").innerHTML = header.concat(main);
+
+    if(localStorage.getItem("usuario_agenda_fatec_logado"))
+    {
+
+        document.getElementById("logout").addEventListener("click", function() {
+
+            localStorage.clear();
+
+            window.location.href = `${index_root_folder}Index.html`;
+
+        });
+
+    }
 
 }
 

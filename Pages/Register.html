@@ -65,6 +65,20 @@
 
         document.getElementById("data").querySelector("input").focus();
 
+        document.querySelector("form").onsubmit = function(event) {
+
+            event.preventDefault();
+
+            const form_data = new FormData(event.target);
+
+            localStorage.clear();
+
+            localStorage.setItem("usuario_agenda_fatec", [form_data.get("name"), form_data.get("email"), form_data.get("password")]);
+
+            window.location.href = "./Login.html";
+
+        }
+
     </script>
 
 </html>
