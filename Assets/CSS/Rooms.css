@@ -53,6 +53,7 @@
     font-weight: bold;
     color: var(--neutral-color);
     text-align: center;
+    overflow: hidden;
     transition: 0.5s;
 
 }

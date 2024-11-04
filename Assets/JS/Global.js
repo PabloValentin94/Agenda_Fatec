@@ -39,7 +39,7 @@ function ADD_Header()
 
     let access = "";
 
-    if(localStorage.getItem("usuario_agenda_fatec_logado"))
+    if(localStorage.getItem("usuario_agenda_fatec_logado") !== null)
     {
 
         access = `<a id="logout" href="${index_root_folder}Index.html"> Sair </a>`;
@@ -49,32 +49,32 @@ function ADD_Header()
     else
     {
 
-        access = `<a href="${pages_root_folder}Register.html"> Cadastro </a>` +
-                 `<a href="${pages_root_folder}Login.html"> Login </a>`;
+        access = `<a href="${pages_root_folder}Register.html"> Cadastro </a>
+                  <a href="${pages_root_folder}Login.html"> Login </a>`;
 
     }
 
-    const header = '<header>' +
+    const header = `<header>
 
-                        '<nav>' +
+                         <nav>
 
-                            '<button> <i class="bx bx-menu">  </i> </button>' +
+                             <button> <i class="bx bx-menu">  </i> </button>
     
-                            '<div id="access">' + 
+                             <div id="access">
                         
-                                access + 
+                                ${access}
                         
-                            '</div>' +
+                             </div>
     
-                        '</nav>' +
+                         </nav>
 
-                   '</header>';
+                    </header>`;
 
     const main = document.getElementById("container").innerHTML;
 
     document.getElementById("container").innerHTML = header.concat(main);
 
-    if(localStorage.getItem("usuario_agenda_fatec_logado"))
+    if(localStorage.getItem("usuario_agenda_fatec_logado") !== null)
     {
 
         document.getElementById("logout").addEventListener("click", function() {
@@ -89,24 +89,24 @@ function ADD_Header()
 
 }
 
-async function ADD_Menu()
+function ADD_Menu()
 {
 
-    const menu = '<div id="menu">' +
+    const menu = `<div id="menu">
 
-                    `<figure> <img src="${assets_root_folder}Assets/Images/Logo.png" alt="Logo"> </figure>` +
+                     <figure> <img src="${assets_root_folder}Assets/Images/Logo.png" alt="Logo"> </figure>
 
-                    '<button> Fechar </button>' +
+                     <button> Fechar </button>
 
-                    '<nav>' +
+                     <nav>
 
-                        `<a href="${index_root_folder}Index.html"> Início </a>` +
-                        `<a href="${pages_root_folder}Rooms.html"> Salas </a>` +
-                        `<a href="${pages_root_folder}Team.html"> Desenvolvedores </a>` +
+                         <a href="${index_root_folder}Index.html"> Início </a>
+                         <a href="${pages_root_folder}Rooms.html"> Salas </a>
+                         <a href="${pages_root_folder}Team.html"> Desenvolvedores </a>
 
-                    '</nav>' +
+                     </nav>
 
-                 '</div>';
+                  </div>`;
 
     const container = document.body.innerHTML;
 

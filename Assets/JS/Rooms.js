@@ -2,9 +2,9 @@
 
 const rooms = [
 
-    {name: "Auditório 01"}, {name: "Auditório 02"}, {name: "Auditório 03"},
-    {name: "Laboratório 01"}, {name: "Laboratório 02"}, {name: "Laboratório 03"},
-    {name: "Laboratório 04"}, {name: "Laboratório 05"}, {name: "Laboratório 06"}
+    {name: "Auditório 01", number: "115"}, {name: "Auditório 02", number: "?"}, {name: "Auditório 03", number: "?"},
+    {name: "Laboratório 01", number: "116"}, {name: "Laboratório 02", number: "114"}, {name: "Laboratório 03", number: "?"},
+    {name: "Laboratório 04", number: "216"}, {name: "Laboratório 05", number: "214"}, {name: "Laboratório 06", number: "212"}
 
 ];
 
@@ -20,13 +20,11 @@ function ADD_Rooms()
     rooms.forEach(room => {
 
         rooms_inserts = rooms_inserts.concat(
+            `<a class="room" href="./Description.html?room_name=${room.name}&room_number=${room.number}">
 
-            '<a class="room" href="#">' +
+                <h2 class="room-name"> ${room.name} (${room.number}) </h2>
 
-                `<h2 class="room-name"> ${room.name} </h2>` +
-
-            '</a>'
-
+            </a>`
         );
 
     });
