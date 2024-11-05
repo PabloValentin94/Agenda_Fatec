@@ -73,7 +73,7 @@
 
                 const user = localStorage.getItem("usuario_agenda_fatec").split(",");
 
-                if(form_data.get("email") === user[1] && form_data.get("password") === user[2])
+                if(form_data.get("email") === user[0] && form_data.get("password") === user[1])
                 {
 
                     localStorage.setItem("usuario_agenda_fatec_logado", true);

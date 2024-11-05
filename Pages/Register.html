@@ -36,8 +36,23 @@
                             <label for="email"> Digite seu e-mail institucional: </label>
                             <input type="email" id="email" name="email" maxlength="50" required>
 
+                            <label for="position"> Defina sua relação com a instituição de ensino: </label>
+                            <select id="position" name="position" required>
+
+                                <option value="1"> Aluno(a) </option>
+                                <option value="2"> Professor(a) </option>
+                                <option value="3"> Auxiliar de Docente </option>
+                                <option value="4"> Coordenador </option>
+                                <option value="5"> Diretor </option>
+                                <option value="6"> Outro </option>
+
+                            </select>
+
                             <label for="password"> Crie uma senha: </label>
                             <input type="password" id="password" name="password" maxlength="20" required>
+
+                            <label for="same-password"> Confirme sua senha: </label>
+                            <input type="password" id="same-password" name="same-password" maxlength="20" required>
 
                             <div id="buttons">
 
@@ -71,11 +86,23 @@
 
             const form_data = new FormData(event.target);
 
-            localStorage.clear();
+            if(form_data.get("password") === form_data.get("same-password"))
+            {
 
-            localStorage.setItem("usuario_agenda_fatec", [form_data.get("name"), form_data.get("email"), form_data.get("password")]);
+                localStorage.clear();
 
-            window.location.href = "./Login.html";
+                localStorage.setItem("usuario_agenda_fatec", [form_data.get("email"), form_data.get("password")]);
+
+                window.location.href = "./Login.html";
+
+            }
+
+            else
+            {
+
+                alert("Senhas não correspondentes! Faça as alterações necessárias e tente novamente.");
+
+            }
 
         }
 

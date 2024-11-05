@@ -1,0 +1,31 @@
+/* Resources: */
+
+@import url("./Global.css");
+
+/* Styles: */
+
+#scheduling {
+
+    height: auto;
+    width: 100%;
+    min-height: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    grid-template-rows: repeat(3, auto);
+    justify-content: center;
+    gap: 50px;
+    background-color: transparent;
+    padding: 80px 15px 15px 15px;
+
+}
+
+#scheduling h1 {
+
+    grid-column: 1 / span 3;
+    font-size: 35px;
+    font-weight: bolder;
+    text-transform: uppercase;
+    text-align: center;
+    color: var(--main-color);
+
+}

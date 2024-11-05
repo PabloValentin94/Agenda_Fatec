@@ -114,6 +114,23 @@ function ADD_Menu()
 
 }
 
+function ADD_Menu_Events()
+{
+
+    document.querySelector("header").querySelector("button").onclick = function() {
+
+        document.getElementById("menu").style.transform = "translateX(0%)";
+
+    };
+
+    document.getElementById("menu").querySelector("button").onclick = function() {
+
+        document.getElementById("menu").style.transform = "translateX(-100%)";
+
+    };
+
+}
+
 // Events:
 
 window.addEventListener("load", function() {
@@ -129,17 +146,7 @@ window.addEventListener("load", function() {
 
         ADD_Header();
 
-        document.querySelector("header").querySelector("button").onclick = function() {
-
-            document.getElementById("menu").style.transform = "translateX(0%)";
-    
-        };
-    
-        document.getElementById("menu").querySelector("button").onclick = function() {
-    
-            document.getElementById("menu").style.transform = "translateX(-100%)";
-    
-        };
+        ADD_Menu_Events();
         
     }
 

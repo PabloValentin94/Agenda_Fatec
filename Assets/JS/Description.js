@@ -1,5 +1,7 @@
 // Constants and Variables:
 
+const get_variables = new URLSearchParams(window.location.search);
+
 const equipments = [
 
     {name: "Televisão", quantity: 2}, {name: "Computador", quantity: 30}, {name: "Monitor", quantity: 30},
@@ -38,27 +40,15 @@ function Modify_Header()
 
     access.parentNode.removeChild(access);
 
-    document.querySelector("header").querySelector("nav").innerHTML += `<a href="#"> Agendar </a>`;
+    document.querySelector("header").querySelector("nav").innerHTML += `<a href="./Scheduling.html?room=${get_variables.get("room_name")}"> Agendar </a>`;
 
-    document.querySelector("header").querySelector("button").onclick = function() {
-
-        document.getElementById("menu").style.transform = "translateX(0%)";
-
-    };
-
-    document.getElementById("menu").querySelector("button").onclick = function() {
-
-        document.getElementById("menu").style.transform = "translateX(-100%)";
-
-    };
+    ADD_Menu_Events();
 
 }
 
 // Events:
 
 window.addEventListener("load", function() {
-
-    const get_variables = new URLSearchParams(window.location.search);
 
     document.querySelector("p").innerText = `${get_variables.get("room_name")} (${get_variables.get("room_number")})`;
 

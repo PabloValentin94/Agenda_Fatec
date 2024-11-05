@@ -60,7 +60,7 @@
 
 }
 
-#form form #data label, #form form #data input {
+#form form #data label, #form form #data input, #form form #data select {
 
     font-size: 20px;
     text-align: center;
@@ -70,21 +70,35 @@
 #form form #data label {
 
     font-weight: bold;
+    cursor: text;
 
 }
 
-#form form #data input {
+#form form #data input, #form form #data select {
 
     width: 100%;
     border: 1px solid var(--neutral-color);
     outline: none;
     padding: 5px;
+    cursor: pointer;
+
+}
+
+#form form #data input:focus, #form form #data select:focus {
+
+    border: 1px solid var(--contrast-color);
 
 }
 
 #form form #data input:focus {
 
-    border: 1px solid var(--contrast-color);
+    cursor: text;
+
+}
+
+#form form #data select:focus {
+
+    cursor: default;
 
 }
 
