@@ -15,11 +15,27 @@
 
 /* Styles: */
 
-#menu {
+#blocker {
+
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    background-color: transparent;
+    backdrop-filter: blur(10px);
+    overflow: hidden;
+    transform: translateX(-100%);
+    transition: 0.75s;
+    z-index: 3;
+
+}
+
+#blocker #menu {
 
     height: 100%;
     width: 300px;
-    position: absolute;
     display: grid;
     grid-template-columns: 100%;
     grid-template-rows: 175px 40px auto;
@@ -29,20 +45,17 @@
     overflow-x: hidden;
     overflow-y: auto;
     scrollbar-color: var(--main-color) var(--page-color);
-    transform: translateX(-100%);
-    transition: 0.5s;
-    z-index: 3;
 
 }
 
-#menu figure {
+#blocker #menu figure {
 
     border-radius: 5px;
     overflow: hidden;
 
 }
 
-#menu figure img {
+#blocker #menu figure img {
 
     height: 100%;
     width: 100%;
@@ -50,7 +63,7 @@
 
 }
 
-#menu button {
+#blocker #menu button {
 
     display: flex;
     flex-direction: row;
@@ -68,14 +81,14 @@
 
 }
 
-#menu button:hover {
+#blocker #menu button:hover {
 
     background-color: var(--main-color);
     border: 2px solid var(--main-color);
 
 }
 
-#menu nav {
+#blocker #menu nav {
 
     display: flex;
     flex-direction: column;
@@ -88,7 +101,7 @@
 
 }
 
-#menu nav a {
+#blocker #menu nav a {
 
     display: flex;
     flex-direction: row;
@@ -105,7 +118,7 @@
 
 }
 
-#menu nav a:hover {
+#blocker #menu nav a:hover {
 
     color: var(--main-color);
     text-shadow: 0 0 20px #000000;

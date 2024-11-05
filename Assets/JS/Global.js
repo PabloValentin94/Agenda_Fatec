@@ -92,19 +92,23 @@ function ADD_Header()
 function ADD_Menu()
 {
 
-    const menu = `<div id="menu">
+    const menu = `<div id="blocker">
 
-                     <figure> <img src="${assets_root_folder}Assets/Images/Logo.png" alt="Logo"> </figure>
+                     <div id="menu">
 
-                     <button> Fechar </button>
+                        <figure> <img src="${assets_root_folder}Assets/Images/Logo.png" alt="Logo"> </figure>
 
-                     <nav>
+                        <button> Fechar </button>
 
-                         <a href="${index_root_folder}Index.html"> Início </a>
-                         <a href="${pages_root_folder}Rooms.html"> Salas </a>
-                         <a href="${pages_root_folder}Team.html"> Desenvolvedores </a>
+                        <nav>
 
-                     </nav>
+                            <a href="${index_root_folder}Index.html"> Início </a>
+                            <a href="${pages_root_folder}Rooms.html"> Salas </a>
+                            <a href="${pages_root_folder}Team.html"> Desenvolvedores </a>
+
+                        </nav>
+
+                     </div>
 
                   </div>`;
 
@@ -119,13 +123,13 @@ function ADD_Menu_Events()
 
     document.querySelector("header").querySelector("button").onclick = function() {
 
-        document.getElementById("menu").style.transform = "translateX(0%)";
+        document.getElementById("blocker").style.transform = "translateX(0%)";
 
     };
 
     document.getElementById("menu").querySelector("button").onclick = function() {
 
-        document.getElementById("menu").style.transform = "translateX(-100%)";
+        document.getElementById("blocker").style.transform = "translateX(-100%)";
 
     };
 

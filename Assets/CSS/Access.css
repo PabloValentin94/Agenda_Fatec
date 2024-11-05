@@ -62,6 +62,7 @@
 
 #form form #data label, #form form #data input, #form form #data select {
 
+    background-color: transparent;
     font-size: 20px;
     text-align: center;
 
