@@ -30,7 +30,7 @@
 
 }
 
-#home .text, #about .text, #contact .text {
+#home article, #about article, #contact article {
 
     display: flex;
     flex-direction: column;
@@ -39,43 +39,43 @@
 
 }
 
-#home .text, #about .text {
+#home article, #about article {
 
     max-width: 50%;
     align-items: flex-start;
 
 }
 
-#contact .text {
+#contact article {
 
     max-width: 100%;
     align-items: center;
 
 }
 
-#home .text .emphasis, #about .text .emphasis, #contact .text .emphasis {
+#home article .emphasis, #about article .emphasis, #contact article .emphasis {
 
     color: var(--main-color);
     font-weight: bold;
 
 }
 
-#home .text h2, #home .text h1, #home .text p
-#about .text h2, #about .text p {
+#home article h2, #home article h1, #home article p
+#about article h2, #about article p {
 
     max-width: 100%;
     text-align: left;
 
 }
 
-#contact .text h2, #contact .text p {
+#contact article h2, #contact article p {
 
     max-width: 100%;
     text-align: center;
 
 }
 
-#home .text h2, #about .text h2, #contact .text h2 {
+#home article h2, #about article h2, #contact article h2 {
 
     max-width: 100%;
     font-size: 30px;
@@ -84,7 +84,7 @@
 
 }
 
-#home .text h1 {
+#home article h1 {
 
     max-width: 100%;
     font-size: 75px;
@@ -94,7 +94,7 @@
 
 }
 
-#home .text p, #about .text p, #contact .text p {
+#home article p, #about article p, #contact article p {
 
     width: 600px;
     max-width: 100%;
@@ -122,7 +122,7 @@
     
 }
 
-#contact .text #links {
+#contact article #links {
 
     width: 100%;
     display: flex;
@@ -133,7 +133,7 @@
 
 }
 
-#contact .text #links a {
+#contact article #links a {
 
     display: flex;
     flex-direction: row;
@@ -144,7 +144,7 @@
 
 }
 
-#contact .text #links a i {
+#contact article #links a i {
 
     font-size: 40px;
     color: var(--contrast-color);
@@ -152,7 +152,7 @@
 
 }
 
-#contact .text #links a:hover i {
+#contact article #links a:hover i {
 
     color: var(--main-color);
 
@@ -174,15 +174,15 @@
 
     }
 
-    #home .text, #about .text {
+    #home article, #about article {
 
         max-width: 100%;
         align-items: center;
 
     }
 
-    #home .text h2, #home .text h1, #home .text p,
-    #about .text h2, #about .text p {
+    #home article h2, #home article h1, #home article p,
+    #about article h2, #about article p {
 
         text-align: center;
     

@@ -9,13 +9,13 @@
     height: auto;
     width: 100%;
     min-height: 100%;
-    display: grid;
-    grid-template-columns: repeat(3, auto);
-    grid-template-rows: repeat(3, auto);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
-    gap: 50px;
+    gap: 15px;
     background-color: transparent;
-    padding: 80px 15px 15px 15px;
+    padding: 15px;
 
 }
 
@@ -27,5 +27,131 @@
     text-transform: uppercase;
     text-align: center;
     color: var(--main-color);
+
+}
+
+#scheduling form {
+
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+    background-color: transparent;
+    border-radius: 15px;
+    padding: 10px;
+
+}
+
+#scheduling form div {
+
+    max-width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+
+}
+
+#scheduling form label, #scheduling form .label, #scheduling form input, #scheduling form select, #scheduling form div p {
+
+    background-color: transparent;
+    font-size: 20px;
+    text-align: center;
+
+}
+
+#scheduling form label, #scheduling form .label {
+
+    font-weight: bold;
+    cursor: text;
+
+}
+
+#scheduling form input, #scheduling form select {
+
+    width: 100%;
+    border: 1px solid var(--neutral-color);
+    outline: none;
+    padding: 5px;
+    cursor: pointer;
+
+}
+
+#scheduling form input:focus, #scheduling form select:focus {
+
+    border: 1px solid var(--contrast-color);
+
+}
+
+#scheduling form input:focus {
+
+    cursor: text;
+
+}
+
+#scheduling form select:focus {
+
+    cursor: default;
+
+}
+
+#scheduling form div select {
+
+    width: 130px;
+
+}
+
+#scheduling form #buttons {
+
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+
+}
+
+#scheduling form #buttons a, #scheduling form #buttons button {
+
+    width: 100px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--neutral-color);
+    padding: 5px;
+    cursor: pointer;
+    transition: 0.5s;
+
+}
+
+#scheduling form #buttons a {
+
+    text-decoration: none;
+
+}
+
+#scheduling form #buttons button, #scheduling form #buttons a,
+#scheduling form #buttons:hover > button:not(:hover), #scheduling form #buttons:hover > a:not(:hover) {
+
+    background-color: transparent;
+    border: 2px solid var(--neutral-color);
+    color: var(--neutral-color);
+
+}
+
+#scheduling form #buttons button:hover, #scheduling form #buttons button:nth-child(3), #scheduling form #buttons a:hover {
+
+    background-color: var(--main-color);
+    border: 2px solid var(--main-color);
+    color: var(--page-color);
 
 }

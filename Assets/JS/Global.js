@@ -141,7 +141,7 @@ window.addEventListener("load", function() {
 
     ADD_Favicon();
 
-    const pages_without_nav = ["Login.html", "Register.html"];
+    const pages_without_nav = ["Login.html", "Register.html", "Scheduling.html"];
 
     if(!pages_without_nav.includes(window.location.pathname.split("/").pop()))
     {

@@ -9,6 +9,7 @@
         <title> Agendamento de Sala | Agenda Fatec </title>
 
         <script defer type="text/javascript" src="../Assets/JS/Global.js">  </script>
+        <script defer type="text/javascript" src="../Assets/JS/Scheduling.js">  </script>
 
         <link rel="stylesheet" type="text/css" href="../Assets/CSS/Scheduling.css">
 
@@ -29,6 +30,65 @@
                 <section id="scheduling">
 
                     <h1> Agendamento de Sala </h1>
+
+                    <form action="#">
+
+                        <label for="room"> Escolha uma das salas disponíveis: </label>
+                        <select name="room" id="room" required>
+
+                            <!-- Salas -->
+
+                        </select>
+
+                        <label for="date"> Escolha o dia desejado: </label>
+                        <input type="date" name="date" id="date" value="2024-11-06" required>
+
+                        <p class="label"> Defina um horário de utilização: </p>
+                        <div>
+
+                            <input type="radio" name="period" value="morning" checked>
+                            <p> Manhã </p>
+
+                            <input type="radio" name="period" value="night">
+                            <p> Noite </p>
+
+                            <input type="hidden" id="period" value="morning">
+
+                        </div>
+                        <div>
+
+                            <label for="start-time"> Das: </label>
+                            <select name="start-time" id="start-time" required>
+
+                                <!-- Horários - Início -->
+
+                            </select>
+
+                            <label for="end-time"> Às: </label>
+                            <select name="end-time" id="end-time" required>
+
+                                <!-- Horários - Fim -->
+
+                            </select>
+                            
+                        </div>
+
+                        <label for="administrator"> Especifique o auxiliar de docente do seu curso: </label>
+                        <select name="administrator" id="administrator" required>
+
+                            <option value="1"> Matheus (DSM) </option>
+
+                        </select>
+
+                        <div id="buttons">
+
+                            <a href="./Rooms.html"> Cancelar </a>
+                            <button type="reset"> Limpar </button>
+                            <button type="submit"> Entrar </button>
+
+                        </div>
+
+                    </form>
 
                 </section>
 
