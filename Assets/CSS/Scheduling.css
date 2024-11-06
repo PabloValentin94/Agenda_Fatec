@@ -86,12 +86,6 @@
 
 }
 
-#scheduling form input:focus {
-
-    cursor: text;
-
-}
-
 #scheduling form select:focus {
 
     cursor: default;
@@ -118,7 +112,7 @@
 
 #scheduling form #buttons a, #scheduling form #buttons button {
 
-    width: 100px;
+    width: 120px;
     display: flex;
     flex-direction: row;
     align-items: center;

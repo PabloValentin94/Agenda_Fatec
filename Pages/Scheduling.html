@@ -41,18 +41,18 @@
                         </select>
 
                         <label for="date"> Escolha o dia desejado: </label>
-                        <input type="date" name="date" id="date" value="2024-11-06" required>
+                        <input type="date" name="date" id="date" required>
 
                         <p class="label"> Defina um horário de utilização: </p>
                         <div>
+
+                            <input type="hidden" id="period" value="morning">
 
                             <input type="radio" name="period" value="morning" checked>
                             <p> Manhã </p>
 
                             <input type="radio" name="period" value="night">
                             <p> Noite </p>
-
-                            <input type="hidden" id="period" value="morning">
 
                         </div>
                         <div>
@@ -76,7 +76,7 @@
                         <label for="administrator"> Especifique o auxiliar de docente do seu curso: </label>
                         <select name="administrator" id="administrator" required>
 
-                            <option value="1"> Matheus (DSM) </option>
+                            <option value="1"> Matheus </option>
 
                         </select>
 
@@ -84,7 +84,7 @@
 
                             <a href="./Rooms.html"> Cancelar </a>
                             <button type="reset"> Limpar </button>
-                            <button type="submit"> Entrar </button>
+                            <button type="submit"> Requisitar </button>
 
                         </div>
 

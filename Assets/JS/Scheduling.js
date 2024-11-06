@@ -28,11 +28,41 @@ function Add_Rooms()
     for(let i = 0; i < rooms.length; i++)
     {
 
-        rooms_inserts = rooms_inserts.concat(`<option value="${i}"${(get_variables.get("room") === rooms[i].name) ? " selected" : ""}> ${rooms[i].name} (${rooms[i].number}) </option>`);
+        rooms_inserts = rooms_inserts.concat(`<option value="${i + 1}"${(get_variables.get("room") === rooms[i].name) ? " selected" : ""}> ${rooms[i].name} (${rooms[i].number}) </option>`);
 
     }
 
-    document.getElementById("room").innerHTML = rooms_inserts;
+    document.getElementById("room").innerHTML = "".concat(rooms_inserts);
+
+}
+
+function Define_Date()
+{
+
+    const months = {
+
+        "Jan": "01",
+        "Feb": "02",
+        "Mar": "03:",
+        "Apr": "04",
+        "May": "05",
+        "Jun": "06",
+        "Jul": "07",
+        "Aug": "08",
+        "Sep": "09",
+        "Oct": "10",
+        "Nov": "11",
+        "Dec": "12"
+
+    }
+
+    const today = new Date(Date.now()).toString().split(" ");
+
+    const date = `${today[3]}-${months[today[1]]}-${today[2]}`;
+
+    document.getElementById("date").value = date;
+
+    document.getElementById("date").min = date;
 
 }
 
@@ -66,6 +96,8 @@ window.addEventListener("load", function() {
 
     Add_Rooms();
 
+    Define_Date();
+
     Add_Times();
 
 });
@@ -86,3 +118,11 @@ document.querySelector("div").querySelectorAll("input").forEach(element => {
     }
 
 });
+
+document.querySelector("form").onreset = function() {
+
+    document.getElementById("period").value = "morning";
+
+    Add_Times();
+
+}
