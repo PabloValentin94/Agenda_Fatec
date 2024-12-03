@@ -144,15 +144,26 @@
 
 }
 
+#contact article p a {
+
+    text-decoration: none;
+
+}
+
 #contact article #links a i {
 
     font-size: 40px;
+
+}
+
+#contact article p a, #contact article #links a i {
+
     color: var(--contrast-color);
     transition: 0.5s;
 
 }
 
-#contact article #links a:hover i {
+#contact article p a:hover, #contact article #links a:hover i {
 
     color: var(--main-color);
 

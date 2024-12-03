@@ -1,0 +1,239 @@
+/* Resources: */
+
+@import url("./Global.css");
+
+/* Styles: */
+
+#help {
+
+    height: auto;
+    width: 100%;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 25px;
+    background-color: transparent;
+    padding: 80px 15px 15px 15px;
+
+}
+
+#help h1 {
+
+    font-size: 35px;
+    font-weight: bolder;
+    text-transform: uppercase;
+    text-align: center;
+    color: var(--main-color);
+
+}
+
+#help p {
+
+    width: 650px;
+    max-width: 100%;
+    font-size: 22px;
+    text-align: center;
+
+}
+
+#help section {
+
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+
+}
+
+#help section h2 {
+
+    font-size: 25px;
+    font-weight: bolder;
+    color: var(--contrast-color);
+    text-align: center;
+
+}
+
+#help #tutorial .tutorial-step {
+
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+
+}
+
+#help #tutorial .tutorial-step p a {
+
+    text-decoration: none;
+    color: var(--contrast-color);
+    transition: 0.5s;
+
+}
+
+#help #tutorial .tutorial-step p a:hover {
+
+    color: var(--main-color);
+
+}
+
+#help #tutorial .tutorial-step ul {
+
+    max-width: 100%;
+    list-style: none;
+
+}
+
+#help #tutorial .tutorial-step ul li {
+
+    /* border: 1px solid var(--neutral-color); */
+    font-size: 20px;
+    text-align: center;
+    padding: 10px;
+    
+}
+
+#help #tutorial .tutorial-step ul li i {
+
+    font-size: 15px;
+    color: var(--contrast-color);
+
+}
+
+#help #tutorial .tutorial-step figure {
+
+    min-width: 450px;
+    max-width: 450px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--neutral-color);
+    overflow: hidden;
+
+}
+
+#help #tutorial .tutorial-step figure img {
+
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    
+}
+
+#help #contact form {
+
+    width: 650px;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+    background-color: transparent;
+    border-radius: 15px;
+    padding: 10px;
+
+}
+
+#help #contact form label, #help #contact form input, #help #contact form textarea {
+
+    background-color: transparent;
+    font-size: 20px;
+    text-align: center;
+
+}
+
+#help #contact form label {
+
+    font-weight: bold;
+    cursor: text;
+
+}
+
+#help #contact form input, #help #contact form textarea {
+
+    width: 100%;
+    border: 1px solid var(--neutral-color);
+    outline: none;
+    padding: 5px;
+    cursor: pointer;
+
+}
+
+#help #contact form textarea {
+
+    height: 150px;
+    resize: none;
+    text-align: left;
+
+}
+
+#help #contact form input:focus, #help #contact form textarea:focus {
+
+    border: 1px solid var(--contrast-color);
+
+}
+
+#help #contact form #buttons {
+
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+
+}
+
+#help #contact form #buttons button {
+
+    width: 120px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--neutral-color);
+    padding: 5px;
+    cursor: pointer;
+    transition: 0.5s;
+
+}
+
+#help #contact form #buttons button, #help #contact form #buttons:hover > button:not(:hover) {
+
+    background-color: transparent;
+    border: 2px solid var(--neutral-color);
+    color: var(--neutral-color);
+
+}
+
+#help #contact form #buttons button:hover, #help #contact form #buttons button:nth-child(2) {
+
+    background-color: var(--main-color);
+    border: 2px solid var(--main-color);
+    color: var(--page-color);
+
+}
+
+/* Responsiveness: */
+
+@media (max-width: 767px) {
+
+    #help #tutorial .tutorial-step figure {
+
+        min-width: 300px;
+        max-width: 300px;
+    
+    }
+
+}

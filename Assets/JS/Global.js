@@ -105,6 +105,7 @@ function ADD_Menu()
                             <a href="${index_root_folder}Index.html"> Início </a>
                             <a href="${pages_root_folder}Rooms.html"> Salas </a>
                             <a href="${pages_root_folder}Team.html"> Desenvolvedores </a>
+                            <a href="${pages_root_folder}Help.html"> Ajuda </a>
 
                         </nav>
 
